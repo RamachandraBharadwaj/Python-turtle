@@ -2,10 +2,7 @@ from subprocess import call
 import tkinter
 import os
 
-
-#hello ! please change the directory before 
 os.chdir(r"E:\\Coding guide\\my python\\turtle files")
-
 def cretwin():
     errpop=tkinter.Toplevel(rama)
     errpop.title("waitt!!")
@@ -38,13 +35,16 @@ def accept():
             call(["python3","shuriken jutsu.py"])
         case "9":
             call(["python3","dual turt.py"])
-        case "trinetra": #buzzword easter egg to close the program
+        case "trinetra keshava":
             quit()
         case _:
             cretwin()
             print("hello bro !! mistake commited !")
 
 rama=tkinter.Tk()
+frame=tkinter.Frame(rama)
+frame.pack()
+
 rama.geometry("720x720")
 rama.title("Main menu - polygons")
 rama.config(background="black")
@@ -52,17 +52,17 @@ rama.config(background="black")
 
 thumbnail=tkinter.PhotoImage(file="dixie.png")
 mm=tkinter.PhotoImage(file="gui menu0000.png") #720 x 720 width height
-rama.iconphoto(True,thumbnail)
+frame.iconphoto(True,thumbnail)
 label=tkinter.Label(image=mm, relief="raised")
 label.pack()
 
 
 
-inpu=tkinter.Entry(rama,font=("Comic sans",22),width=41)
+inpu=tkinter.Entry(frame,font=("Comic sans",22),width=41)
 inpu.place(x=290,y=710)
 
 
-enterbutton=tkinter.Button(rama,text="let's go!",font=("Arial",12),command=accept,compound="bottom",padx=5,pady=5)
+enterbutton=tkinter.Button(frame,text="let's go!",font=("Arial",12),command=accept,compound="bottom",padx=5,pady=5)
 enterbutton.place(x=938,y=710)
 
 
